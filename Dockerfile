@@ -1,13 +1,13 @@
 FROM node:lts as dependencies
 WORKDIR /chat-ai
-COPY package.json yarn.lock ./
-RUN yarn install --frozen-lockfile
+COPY package.json npm.lock ./
+RUN npm install --frozen-lockfile
 
 FROM node:lts as builder
 WORKDIR /chat-ai
 COPY . .
 COPY --from=dependencies /chat-ai/node_modules ./node_modules
-RUN yarn build
+RUN npm build
 
 FROM node:lts as runner
 WORKDIR /chat-ai
@@ -19,4 +19,4 @@ COPY --from=builder /chat-ai/node_modules ./node_modules
 COPY --from=builder /chat-ai/package.json ./package.json
 
 EXPOSE 3000
-CMD ["yarn", "start"]
+CMD ["npm", "start"]
