@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+ 
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --ring: 215 20.2% 65.1%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+ 
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+ 
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+ 
+    --ring: 217.2 32.6% 17.5%;
+  }
+}
+
+.chat-container {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgb(0, 0, 0);
+    text-align: justify;
+    overflow: hidden;
+    padding: 2px;
+    position: relative;
+    width: 620px;
+    max-width: 100%;
+    margin: 5px;
+}
+
+.bg-master{
+    background: url('/bg-master.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.chat-container p{
+  padding: 8px;
+}
+
+.chat-title{
+    color: rgb(255,255,255);
+}
+
+.chat-description{
+    color: rgb(255,255,255);
+}
+
+.chat-name {
+    font-weight: bold;
+    color: rgb(0,0,0);
+    padding: 0px 0px 0px 60px;
+    margin-top: 10px;
+
+}
+
+.chat-content {
+    color: rgb(20, 20, 20);
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.chat-message {
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 255);
+    box-shadow: 2px 2px 2px 2px rgb(48, 47, 47);
+}
+
+.logo {    
+    left: 5px;
+    bottom: -30px;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    box-shadow: -2px 5px 5px 0px rgba(0,0,0,0.7);
+    background-color: rgb(255, 255, 255);
+}
+
+.logo right{
+    left: auto;
+    right: 10px;
+}
