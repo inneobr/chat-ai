@@ -1,19 +1,18 @@
-# Build Stage
-FROM node:16-alpine AS BUILD_IMAGE
-WORKDIR /app
-COPY package*.json ./
+FROM node:18-alpine as builder
+WORKDIR /chat-ai
+
+COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
 RUN npm run build
 
-
-# Production Stage
-FROM node:16-alpine AS PRODUCTION_STAGE
-WORKDIR /app
-COPY --from=BUILD_IMAGE /app/package*.json ./
-COPY --from=BUILD_IMAGE /app/.next ./.next
-COPY --from=BUILD_IMAGE /app/public ./public
-COPY --from=BUILD_IMAGE /app/node_modules ./node_modules
-ENV NODE_ENV=production
+FROM node:18-alpine as runner
+WORKDIR /chat-ai
+COPY --from=builder /chat-ai/package.json .
+COPY --from=builder /chat-ai/package-lock.json .
+COPY --from=builder /chat-ai/next.config.js ./
+COPY --from=builder /chat-ai/public ./public
+COPY --from=builder /chat-ai/.next/standalone ./
+COPY --from=builder /chat-ai/.next/static ./.next/static
 EXPOSE 3000
-CMD ["npm", "start"]
+ENTRYPOINT ["npm", "start"]
