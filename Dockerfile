@@ -1,12 +1,16 @@
 FROM node:18-alpine
 
-RUN mkdir -p /usr/app/
-WORKDIR /usr/app/
+ENV NODE_ENV=production
+ENV HOST=0.0.0.0
 
-COPY ./ ./
+WORKDIR /usr/src/app
 
-RUN npm install
-RUN npm run builder
+COPY package*.json ./
+RUN npm install --only=production
+
+COPY . .
+
+RUN npm run build
 
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD [ "npm", "run", "start" ]
