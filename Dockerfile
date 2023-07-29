@@ -1,8 +1,6 @@
-FROM node:16-alpine
-RUN mkdir -p /app
+FROM node:18-alpine
 WORKDIR /app
 COPY . .
-RUN npm install
-RUN npm run build
+RUN yarn install --production
+CMD ["node", "src/index.js"]
 EXPOSE 3000
-CMD ["npm", "start"]
