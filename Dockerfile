@@ -1,16 +1,16 @@
 FROM node:18-alpine as builder
-WORKDIR /chat-ai
+WORKDIR /app
 
 COPY package*.json ./
 RUN npm install
 
 FROM node:18-alpine as runner
-WORKDIR /chat-ai
-COPY --from=builder /chat-ai/package.json .
-COPY --from=builder /chat-ai/package-lock.json .
-COPY --from=builder /chat-ai/next.config.js ./
-COPY --from=builder /chat-ai/public ./public
-COPY --from=builder /chat-ai/.next/standalone ./
-COPY --from=builder /chat-ai/.next/static ./.next/static
+WORKDIR /app
+COPY --from=builder /app/package.json .
+COPY --from=builder /app/package-lock.json .
+COPY --from=builder /app/next.config.js ./
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
 EXPOSE 3000
 ENTRYPOINT ["npm", "dev"]
