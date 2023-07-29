@@ -1,16 +1,12 @@
-FROM node:18-alpine as builder
-WORKDIR /app
+FROM node:18-alpine
 
-COPY package*.json ./
+RUN mkdir -p /usr/app/
+WORKDIR /usr/app/
+
+COPY ./ ./
+
 RUN npm install
+RUN npm run builder
 
-FROM node:18-alpine as runner
-WORKDIR /app
-COPY --from=builder /app/package.json .
-COPY --from=builder /app/package-lock.json .
-COPY --from=builder /app/next.config.js ./
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/.next/static ./.next/static
 EXPOSE 3000
-ENTRYPOINT ["npm", "dev"]
+CMD ["npm", "start"]
