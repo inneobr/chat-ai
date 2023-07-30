@@ -1,10 +1,8 @@
 import { Configuration, OpenAIApi } from "openai-edge";
 import { OpenAIStream, StreamingTextResponse } from "ai";
 
-const CHAVE_KEY = "sk-rQbM7Zc9bIf6qLICWGT";
-
 const config = new Configuration({
-  apiKey: CHAVE_KEY + process.env.OPENAI_API_KEY
+  apiKey: process.env.OPENAI_API_KEY
 })
 
 const openai = new OpenAIApi(config);
