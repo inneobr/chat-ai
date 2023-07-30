@@ -1,5 +1,5 @@
 FROM node:18-alpine
-WORKDIR /src/app
+WORKDIR /home/api
 
 COPY package.json .
 COPY package-lock.json . 
