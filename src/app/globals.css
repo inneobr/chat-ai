@@ -70,70 +70,36 @@
   }
 }
 
-.chat-container {
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px 2px rgb(0, 0, 0);
-    text-align: justify;
-    overflow: hidden;
-    padding: 2px;
-    position: relative;
-    width: 620px;
-    max-width: 100%;
-    margin: 5px;
-}
-
-.bg-master{
-    background: url('/bg-master.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.chat-container p{
-  padding: 8px;
-}
-
-.chat-title{
-    color: rgb(255,255,255);
-}
-
-.chat-description{
-    color: rgb(255,255,255);
-}
-
-.chat-name {
-    font-weight: bold;
-    color: rgb(0,0,0);
-    padding: 0px 0px 0px 60px;
-    margin-top: 10px;
-
-}
-
-.chat-content {
-    color: rgb(20, 20, 20);
-    padding: 15px;
-    margin-top: 10px;
-}
-
-.chat-message {
+.wrapper {
+    border-radius: 0;
+    height: 80vh;
     width: 100%;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 255);
-    box-shadow: 2px 2px 2px 2px rgb(48, 47, 47);
 }
 
-.logo {    
-    left: 5px;
-    bottom: -30px;
+.justify-content{
+    text-align: justify;
+}
+
+.justify-content::first-letter{
+    text-transform: uppercase;
+}
+
+.img-logo {  
     width: 50px;
     height: 50px;
-    padding: 5px;
-    box-shadow: -2px 5px 5px 0px rgba(0,0,0,0.7);
-    background-color: rgb(255, 255, 255);
+    margin-left: 5px;
 }
 
-.logo right{
-    left: auto;
-    right: 10px;
+.header{
+    border-bottom: Solid 1px rgb(224, 224, 224);
+}
+
+.user-name{
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.user-status{
+    margin-left: 5px;
+    color: rgb(46, 145, 46);
 }
