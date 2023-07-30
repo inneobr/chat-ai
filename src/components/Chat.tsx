@@ -38,7 +38,7 @@ export function Chat(){
                                                 </div>
                                                 <Avatar className="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-2 items-start">
                                                     <AvatarFallback>FB</AvatarFallback>
-                                                    <AvatarImage src="/Guest.png"/>
+                                                    <AvatarImage src="/Avatar.png"/>
                                                 </Avatar>
                                             </div>
                                         )}
