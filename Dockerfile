@@ -1,7 +1,10 @@
 FROM node:18-alpine
 WORKDIR /src/app
+
+COPY package.json .
+COPY package-lock.json . 
+RUN npm install
+
 COPY . .
 
-RUN npm install --production
-RUN npm run build
-CMD ["nmp", "start"]
+CMD npm run start:dev
