@@ -24,8 +24,15 @@ export function Chat(){
                 </div>
             </CardHeader>
             <CardContent className="space-y-4"> 
-                <ScrollArea className="wrapper">                                 
-                    ddd
+                <ScrollArea className="wrapper">  
+
+                    { messages.map(message => {
+                            return ( <span>teste</span>
+                            
+                            )
+                        }
+                    )}
+
                 </ScrollArea> 
             </CardContent>
             <CardFooter>
