@@ -24,4 +24,3 @@ jobs:
           push: true
           tags: |
             decodingeduardocruz/chat-ai:latest
-             decodingeduardocruz/chat-ai:v1
