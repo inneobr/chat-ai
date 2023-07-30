@@ -24,7 +24,7 @@ export function Chat(){
                 </div>
             </CardHeader>
             <CardContent className="space-y-4"> 
-                <ScrollArea className="wrapper">                                 
+                                              
                     { messages.map(message => {
                         return (              
                             <div id="messages" className="flex flex-col space-y-4 p-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch">
@@ -60,7 +60,6 @@ export function Chat(){
                             </div> 
                         )}) 
                     }
-                </ScrollArea> 
             </CardContent>
             <CardFooter>
                 <form className="w-full flex gap-2 card-footer" onSubmit={ handleSubmit }>
