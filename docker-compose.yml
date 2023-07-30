@@ -7,6 +7,6 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - .:/home/api
-      - /home/api/node_modules
+      - .:/home/app
+      - /home/app/node_modules
   
