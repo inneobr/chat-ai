@@ -10,7 +10,7 @@ services:
     networks: 
       - bridge
     volumes:
-      - app:/var/www/chat         
+      - app:/var/www/app         
 
 networks:
   bridge:
