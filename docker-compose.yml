@@ -6,15 +6,15 @@ services:
     container_name: chat-ai
     build: .
     ports:
-      - "8282:3000"
+      - "3000:3000"
     networks: 
       - bridge
     volumes:
-      - chat_data:/var/www/chat         
+      - data:/var/www/chat         
 
 networks:
   bridge:
     driver: bridge
 
 volumes:
-  chat_data:
+  data:
