@@ -10,11 +10,8 @@ services:
     networks: 
       - bridge
     volumes:
-      - app:/var/www/app         
+      - ./data:/data       
 
 networks:
   bridge:
     driver: bridge
-
-volumes:
-  app:
