@@ -1,9 +1,9 @@
 version: '3.7'
 
 services:
-  app:
+  openai:
     restart: always
-    container_name: chat-ai
+    container_name: openai
     build: .
     ports:
       - "3000:3000"
