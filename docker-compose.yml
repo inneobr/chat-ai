@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-  chat-ai:
+  app:
     restart: always
     container_name: chat-ai
     build: .
@@ -10,11 +10,11 @@ services:
     networks: 
       - bridge
     volumes:
-      - chat-ai:/var/www/chat         
+      - app:/var/www/chat         
 
 networks:
   bridge:
     driver: bridge
 
 volumes:
-  chat-ai:
+  app:
