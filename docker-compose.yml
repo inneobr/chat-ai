@@ -8,10 +8,10 @@ services:
     ports:
       - "3000:3000"
     networks: 
-      - bridge
+      - webservice
     volumes:
       - ./data:/data       
 
 networks:
-  bridge:
+  webservice:
     driver: bridge
