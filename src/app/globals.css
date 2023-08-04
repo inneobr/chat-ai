@@ -70,36 +70,7 @@
   }
 }
 
-.wrapper {
-    border-radius: 0;
-    height: 79vh;
-    width: 100%;
-}
-
-.justify-content{
-    text-align: justify;
-}
-
-.justify-content::first-letter{
-    text-transform: uppercase;
-}
-
-.img-logo {  
-    width: 50px;
-    height: 50px;
-    margin-left: 5px;
-}
-
-.header{
-    border-bottom: Solid 1px rgb(224, 224, 224);
-}
-
-.user-name{
-    font-weight: bold;
-    margin-left: 5px;
-}
-
-.user-status{
-    margin-left: 5px;
-    color: rgb(46, 145, 46);
+.border-custom {
+    border: Solid 2px rgb(255,255,255);
+    border-radius: 50%;
 }
