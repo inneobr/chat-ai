@@ -2,7 +2,7 @@
 
 import { useChat } from 'ai/react'
 import { Input } from "./ui/input";
-import { Button } from "./ui/button";
+import 'primeicons/primeicons.css';
 import { ScrollArea } from "./ui/scroll-area";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
@@ -33,17 +33,18 @@ export function Chat(){
                             return (                                                  
                                 <div key={ message.id }>                                
                                     { message.role == 'assistant' && (                                     
-                                            <div className="flex w-full mt-2 space-x-3 max-w-xs ">                                               
-                                                <Avatar className="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300">
-                                                    <AvatarFallback>FB</AvatarFallback>
-                                                    <AvatarImage className="border-custom" src="/assistent_fran.png"/>
-                                                </Avatar>
-
-                                                <div>
+                                            <div className="flex w-full mt-2 space-x-3 max-w-xs ">                                              
+                                                    <Avatar className="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300">
+                                                        <AvatarFallback>FB</AvatarFallback>
+                                                        <AvatarImage className="border-custom" src="/assistent_fran.png"/>
+                                                    </Avatar>
+                                                                              
+                                                <div> 
+                                                   <span className="text-sm text-gray-500 leading-none font-bold capitalize">Franciny Both</span>              
                                                     <div className="text-gray-900 p-3 rounded-r-lg rounded-bl-lg bg-gradient-to-r from-purple-500 to-pink-500">
-                                                        <p className="text-sm">{ message.content }</p>
+                                                        <p className="text-sm text-justify">{ message.content }</p>
                                                     </div>
-                                                    <span className="text-xs text-gray-500 leading-none">2 min ago</span>
+                                                   
                                                 </div>
                                             </div>
                                         
@@ -51,19 +52,19 @@ export function Chat(){
 
                                     { message.role == 'user' && (                                     
                                         <div className="flex w-full mt-2 space-x-3 max-w-xs ml-auto justify-end">                                              
-                                            <div>
+                                            <div> 
+                                                <span className="text-sm text-gray-500 leading-none font-bold">Você</span>
                                                 <div className="bg-blue-600 text-white p-3 rounded-l-lg rounded-br-lg">
-                                                    <p className="text-sm">{ message.content }</p>
+                                                    <p className="text-sm text-justify">{ message.content }</p>
                                                 </div>
-                                                <span className="text-xs text-gray-500 leading-none">2 min ago</span>
+                                               
                                             </div>
 
                                             <Avatar className="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300">
                                                 <AvatarFallback>FB</AvatarFallback>
-                                                <AvatarImage src="/user_image.png"/>
+                                                <AvatarImage className="border-custom" src="/user_image.png"/>
                                             </Avatar>
                                         </div>
-                                        
                                     )}
                                 </div>  
                             )
@@ -71,13 +72,11 @@ export function Chat(){
                     }
                 </ScrollArea>
 
-                 <form className="bg-gray-700 p-4 w-full flex gap-2 card-footer" onSubmit={ handleSubmit }>
-                    <Input className="flex items-center h-10 w-full rounded px-3 bg-slate-700 text-slate-50 no-outline"  type="text" value= { input }  onKeyDown={e => e.key === 'Enter' ? handleInputChange: ''} onChange= { handleInputChange } placeholder="Diga olá."/>
+                <form className="w-full flex gap-2 items-center bg-gray-700 card-footer p-4 " onSubmit={ handleSubmit }> 
+                    <i className="pi pi-comments font-normal text-3xl text-slate-500"></i> 
+                    <Input className="flex items-center h-10 w-full rounded px-3 bg-slate-700 text-slate-50  border-gray-600" value= { input }  onKeyDown={e => e.key === 'Enter' ? handleInputChange: ''} onChange= { handleInputChange } placeholder="Diga olá."/>
                 </form>
-            </div>	
-            
-               
-           
+            </div>
         </section>
     )
 }

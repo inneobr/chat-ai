@@ -70,7 +70,12 @@
   }
 }
 
-.border-custom {
-    border: Solid 2px rgb(255,255,255);
-    border-radius: 50%;
+input:focus, input:hover{ 
+  box-shadow:none !important;
+}
+
+.icon {
+  padding-left: 25px;
+  background: url("/smile.png") no-repeat left;
+  background-size: 20px;
 }

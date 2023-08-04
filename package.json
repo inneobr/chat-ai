@@ -25,6 +25,7 @@
     "next": "13.4.12",
     "openai-edge": "^1.2.2",
     "postcss": "8.4.27",
+    "primeicons": "^6.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwind-merge": "^1.14.0",
