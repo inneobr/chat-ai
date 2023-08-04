@@ -23,4 +23,4 @@ jobs:
           context: .
           push: true
           tags: |
-            decodingeduardocruz/chat-ai:latest
+            inneobr/chat:latest
