@@ -27,7 +27,7 @@ export function Chat(){
                         </div>
                     </div>
                 </header>
-                <ScrollArea className="flex flex-col flex-grow h-0 p-4 bg-slate-600">
+                <ScrollArea className="flex flex-col flex-grow h-0 p-4 bg-slate-300">
                     {   
                         messages.map(message => {
                             return (                                                  
@@ -40,7 +40,7 @@ export function Chat(){
                                                 </Avatar>
 
                                                 <div>
-                                                    <div className="bg-gray-300 text-gray-900 p-3 rounded-r-lg rounded-bl-lg">
+                                                    <div className="text-gray-900 p-3 rounded-r-lg rounded-bl-lg bg-gradient-to-r from-purple-500 to-pink-500">
                                                         <p className="text-sm">{ message.content }</p>
                                                     </div>
                                                     <span className="text-xs text-gray-500 leading-none">2 min ago</span>
@@ -72,8 +72,7 @@ export function Chat(){
                 </ScrollArea>
 
                  <form className="bg-gray-700 p-4 w-full flex gap-2 card-footer" onSubmit={ handleSubmit }>
-                    <Input className="flex items-center h-10 w-full rounded px-3 bg-slate-700 text-slate-50" value= { input } onChange= { handleInputChange } placeholder="Diga olá."/>
-                    <Button type="submit">Send</Button>
+                    <Input className="flex items-center h-10 w-full rounded px-3 bg-slate-700 text-slate-50 no-outline"  type="text" value= { input }  onKeyDown={e => e.key === 'Enter' ? handleInputChange: ''} onChange= { handleInputChange } placeholder="Diga olá."/>
                 </form>
             </div>	
             

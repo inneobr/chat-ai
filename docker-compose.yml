@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-  openai:
+  app:
     restart: always
     container_name: openai
     build: .
