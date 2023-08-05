@@ -1,7 +1,7 @@
 import { Configuration, OpenAIApi } from "openai-edge";
 import { OpenAIStream, StreamingTextResponse } from "ai";
 import * as dotenv from 'dotenv'
-dotenv.config()
+dotenv.config
 
 const config = new Configuration({
   apiKey: process.env.OPENAI_API_KEY
