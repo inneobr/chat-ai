@@ -5,8 +5,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'INNEO OPENAI',
-  description: 'inneo soluções',
+  title: 'INNEO',
+  description: 'tecnologia e soluções',
   manifest: "/manifest.json",
   icons: {
     shortcut: { url: "/favicon.ico", type: "image/x-icon" },
