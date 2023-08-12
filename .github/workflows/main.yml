@@ -23,4 +23,4 @@ jobs:
           context: .
           push: true
           tags: |
-            inneobr/chat:latest
+            inneobr/webservices:latest
